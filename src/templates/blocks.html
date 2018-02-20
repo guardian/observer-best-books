@@ -1,36 +1,170 @@
-<div class="section">
-  {{#Full}}
-    <div id="{{section}}" data-id="{{id}}" class="header {{id}}">
-      <div class="section-header--image">
-        <div class="image--overlay"></div>
-        <img class="{{imageclass}} place-image" data-lazy-img alt="{{id}}" data-src="{{imageURL}}" src="" height="600" width="900" />
-        <div class="section-header--title">
-          {{{svg}}}
-        </div>
-        <div class="section-strap-line">
-          <div class="strapline-wrapper">
-            <div class="content__main-column">
-              <span class="strapline">{{strapline}}</span>
-            </div>
-          </div>
-        </div>
-        <div class="section-header--button">
-          <svg width="46px" height="46px" viewBox="10 1951 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs></defs>
-              <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(11.000000, 1952.000000)">
-                  <polygon id="" fill="#FFFFFF" points="20.9090909 22.9090909 12 22.5 12 21.1136364 20.9090909 20.7272727 21.2954545 11.8181818 22.6818182 11.8181818 23.0909091 20.7272727 32 21.1136364 32 22.5 23.0909091 22.9090909 22.6818182 31.8181818 21.2954545 31.8181818"></polygon>
-                  <circle id="Oval" stroke="#FFFFFF" cx="22" cy="22" r="22"></circle>
-              </g>
-          </svg>
-          <p class="button">Read more</p>
+<div id="people" data-link-name="people header" class="section header people" data-id="people">
+  <div class="section-header--image">
+    <div class="image--overlay"></div>
+    <img class="{{imageclass}} place-image" data-lazy-img alt="{{id}}" data-src="https://media.guim.co.uk/e16576b9483026fc2724427f5015652a1f88dcac/0_1292_10328_6199/2000.jpg" src="" height="600" width="900" />
+    <div class="section-header--title">
+      <div class="gs-container">
+        <div class="content__main-column">
+          <h1>People</h1>
         </div>
       </div>
     </div>
-    <div class="section copy {{id}}">
+    <div class="section-strap-line">
+      <div class="strapline-wrapper">
+        <!-- <div class="content__main-column">
+          <span class="strapline">{{strapline}}</span>
+        </div> -->
+      </div>
+    </div>
+    <div class="section-header--button">
+      <svg width="46px" height="46px" viewBox="10 1951 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs></defs>
+          <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(11.000000, 1952.000000)">
+              <polygon id="" fill="#FFFFFF" points="20.9090909 22.9090909 12 22.5 12 21.1136364 20.9090909 20.7272727 21.2954545 11.8181818 22.6818182 11.8181818 23.0909091 20.7272727 32 21.1136364 32 22.5 23.0909091 22.9090909 22.6818182 31.8181818 21.2954545 31.8181818"></polygon>
+              <circle id="Oval" stroke="#FFFFFF" cx="22" cy="22" r="22"></circle>
+          </g>
+      </svg>
+      <p class="button">Read more</p>
+    </div>
+  </div>
+  <div class="section copy people">
+  {{#People}}
       <div class="content__main-column">
-      <h1 class="heading" id="{{section}}">{{{Name}}}</h1>
-      <h1 class="subheading">{{Country}}</h1>
-      <pre class="copy">{{{Description}}}</pre>
+      {{#image}}
+        <div class="body-image">
+          <div class="image--overlay"></div>
+          <img src="{{{image}}}">
+        </div>
+      {{/image}}
+      <h1 class="heading" id="{{section}}">{{{headline}}}</h1>
+      <pre class="copy">{{{description}}}<span class="credit">{{{credit}}}</span></pre>
+      {{#imageCaption}}
+        <div class="caption">
+          <p class="caption-text">
+              <svg width="13px" height="10px" viewBox="419 355 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M431.714076,357.781915 L430.909531,356.963733 L428.168622,356.963733 L426.804985,355.600097 L424.609531,355.600097 L423.245894,356.963733 L420.532258,356.963733 L419.714076,357.781915 L419.714076,363.809188 L420.532258,364.613733 L430.909531,364.613733 L431.714076,363.768279 L431.714076,357.781915 Z M425.714076,363.100097 C424.35044,363.100097 423.259531,362.009188 423.259531,360.659188 C423.259531,359.295551 424.35044,358.204642 425.714076,358.204642 C427.077713,358.204642 428.182258,359.295551 428.182258,360.659188 C428.182258,362.009188 427.077713,363.100097 425.714076,363.100097 Z" id="" stroke="none" fill="#767676" fill-rule="evenodd"></path>
+              </svg>
+            <span class="pre">Above</span> {{imageCaption}}
+          </p>
+        </div>
+      {{/imageCaption}}
+      </div>
+      <div class="ad--wrapper--desktop">
+        <div id="{{adID}}" class="js-ad-slot ad-slot ad-slot--mpu-banner-ad ad-slot--right" data-link-name="ad slot {{adDataName}}" data-test-id="{{adTestId}}" data-name="{{adName}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
+      </div>
+      <div class="ad--wrapper--mobile" {{#adIDMobile}} style="padding:20px 0px;" {{/adIDMobile}}>
+        {{#adIDMobile}}
+        <div id="{{adIDMobile}}" class="js-ad-slot ad-slot ad-slot--inline {{adTestIdMobile}}" data-link-name="ad slot {{adDataNameMobile}}" data-test-id="{{adTestIdMobile}}" data-name="{{adNameMobile}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
+        {{/adIDMobile}}
+      </div>
+  {{/People}}
+</div>
+</div>
+<div class="ad--wrapper--mobile" style="padding:20px 0px;">
+  <div id="dfp-ad--inline7" class="js-ad-slot ad-slot ad-slot--inline ad-slot--inline7" data-link-name="ad slot inline5" data-test-id="ad-slot-inline7" data-name="inline7" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
+</div>
+<!--places-->
+<div id="places" data-link-name="places header" class="section header places" data-id="places">
+  <div class="section-header--image">
+    <div class="image--overlay"></div>
+    <img class="bottom place-image" data-lazy-img alt="{{id}}" data-src="https://media.guim.co.uk/82d0fc44765fa4366de25da0d17852042180b830/0_0_5602_3735/2000.jpg" src="" height="600" width="900" />
+    <div class="section-header--title">
+      <div class="gs-container">
+        <div class="content__main-column">
+          <h1>Places</h1>
+        </div>
+      </div>
+    </div>
+    <div class="section-strap-line">
+      <div class="strapline-wrapper">
+        <!-- <div class="content__main-column">
+          <span class="strapline">{{strapline}}</span>
+        </div> -->
+      </div>
+    </div>
+    <div class="section-header--button">
+      <svg width="46px" height="46px" viewBox="10 1951 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs></defs>
+          <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(11.000000, 1952.000000)">
+              <polygon id="" fill="#FFFFFF" points="20.9090909 22.9090909 12 22.5 12 21.1136364 20.9090909 20.7272727 21.2954545 11.8181818 22.6818182 11.8181818 23.0909091 20.7272727 32 21.1136364 32 22.5 23.0909091 22.9090909 22.6818182 31.8181818 21.2954545 31.8181818"></polygon>
+              <circle id="Oval" stroke="#FFFFFF" cx="22" cy="22" r="22"></circle>
+          </g>
+      </svg>
+      <p class="button">Read more</p>
+    </div>
+  </div>
+  <div class="section copy places">
+  {{#Places}}
+      <div class="content__main-column">
+        {{#image}}
+          <div class="body-image">
+            <div class="image--overlay"></div>
+            <img src="{{{image}}}">
+          </div>
+        {{/image}}
+      <h1 class="heading" id="{{section}}">{{{headline}}}</h1>
+      <pre class="copy">{{{description}}}<span class="credit">{{{credit}}}</span></pre>
+      {{#imageCaption}}
+        <div class="caption">
+          <p class="caption-text">
+              <svg width="13px" height="10px" viewBox="419 355 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M431.714076,357.781915 L430.909531,356.963733 L428.168622,356.963733 L426.804985,355.600097 L424.609531,355.600097 L423.245894,356.963733 L420.532258,356.963733 L419.714076,357.781915 L419.714076,363.809188 L420.532258,364.613733 L430.909531,364.613733 L431.714076,363.768279 L431.714076,357.781915 Z M425.714076,363.100097 C424.35044,363.100097 423.259531,362.009188 423.259531,360.659188 C423.259531,359.295551 424.35044,358.204642 425.714076,358.204642 C427.077713,358.204642 428.182258,359.295551 428.182258,360.659188 C428.182258,362.009188 427.077713,363.100097 425.714076,363.100097 Z" id="" stroke="none" fill="#767676" fill-rule="evenodd"></path>
+              </svg>
+            <span class="pre">Above</span> {{imageCaption}}
+          </p>
+        </div>
+      {{/imageCaption}}
+      </div>
+      <div class="ad--wrapper--desktop">
+        <div id="{{adID}}" class="js-ad-slot ad-slot ad-slot--mpu-banner-ad ad-slot--right" data-link-name="ad slot {{adDataName}}" data-test-id="{{adTestId}}" data-name="{{adName}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
+      </div>
+  {{/Places}}
+</div>
+</div>
+
+
+<!--FoodDrink-->
+<div id="FoodDrink" data-link-name="food header" class="section header FoodDrink" data-id="FoodDrink">
+  <div class="section-header--image">
+    <div class="image--overlay"></div>
+    <img class="bottom place-image" data-lazy-img alt="{{id}}" data-src="https://media.guim.co.uk/88b4600b23658c083faf24d3b85fb57bc53291ad/0_0_6144_3686/2000.jpg" src="" height="600" width="900" />
+    <div class="section-header--title">
+      <div class="gs-container">
+        <div class="content__main-column">
+          <h1>Food &amp; drink</h1>
+        </div>
+      </div>
+    </div>
+    <div class="section-strap-line">
+      <div class="strapline-wrapper">
+        <!-- <div class="content__main-column">
+          <span class="strapline">{{strapline}}</span>
+        </div> -->
+      </div>
+    </div>
+    <div class="section-header--button">
+      <svg width="46px" height="46px" viewBox="10 1951 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs></defs>
+          <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(11.000000, 1952.000000)">
+              <polygon id="" fill="#FFFFFF" points="20.9090909 22.9090909 12 22.5 12 21.1136364 20.9090909 20.7272727 21.2954545 11.8181818 22.6818182 11.8181818 23.0909091 20.7272727 32 21.1136364 32 22.5 23.0909091 22.9090909 22.6818182 31.8181818 21.2954545 31.8181818"></polygon>
+              <circle id="Oval" stroke="#FFFFFF" cx="22" cy="22" r="22"></circle>
+          </g>
+      </svg>
+      <p class="button">Read more</p>
+    </div>
+  </div>
+  <div class="section copy FoodDrink">
+  {{#FoodDrink}}
+      <div class="content__main-column">
+        {{#image}}
+          <div class="body-image">
+            <div class="image--overlay"></div>
+            <img src="{{{image}}}">
+          </div>
+        {{/image}}
+      <h1 class="heading" id="{{section}}">{{{headline}}}</h1>
+      <pre class="copy">{{{description}}}<span class="credit">{{{credit}}}</span></pre>
+      {{#imageCaption}}
       <div class="caption">
         <p class="caption-text">
             <svg width="13px" height="10px" viewBox="419 355 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -39,15 +173,82 @@
           <span class="pre">Above</span> {{imageCaption}}
         </p>
       </div>
+      {{/imageCaption}}
       </div>
       <div class="ad--wrapper--desktop">
         <div id="{{adID}}" class="js-ad-slot ad-slot ad-slot--mpu-banner-ad ad-slot--right" data-link-name="ad slot {{adDataName}}" data-test-id="{{adTestId}}" data-name="{{adName}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
-      </div>
       </div>
       <div class="ad--wrapper--mobile" {{#adIDMobile}} style="padding:20px 0px;" {{/adIDMobile}}>
         {{#adIDMobile}}
         <div id="{{adIDMobile}}" class="js-ad-slot ad-slot ad-slot--inline {{adTestIdMobile}}" data-link-name="ad slot {{adDataNameMobile}}" data-test-id="{{adTestIdMobile}}" data-name="{{adNameMobile}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
         {{/adIDMobile}}
       </div>
-  {{/Full}}
+  {{/FoodDrink}}
+</div>
+</div>
+<div class="ad--wrapper--mobile" style="padding:20px 0px;">
+  <div id="dfp-ad--inline6" class="js-ad-slot ad-slot ad-slot--inline ad-slot--inline6" data-link-name="ad slot inline6" data-test-id="ad-slot-inline6" data-name="inline6" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
+</div>
+<!--BOOKS-->
+<div id="books" data-link-name="books header" class="section header books" data-id="books">
+  <div class="section-header--image">
+    <div class="image--overlay"></div>
+    <img class="{{imageclass}} place-image" data-lazy-img alt="{{id}}" data-src="https://media.guim.co.uk/8ca571217ca9c7cfe67050841572fdd69b142e68/0_158_5694_3416/2000.jpg" src="" height="600" width="900" />
+    <div class="section-header--title">
+      <div class="gs-container">
+        <div class="content__main-column">
+          <h1>Books</h1>
+        </div>
+      </div>
+    </div>
+    <div class="section-strap-line">
+      <div class="strapline-wrapper">
+        <!-- <div class="content__main-column">
+          <span class="strapline">{{strapline}}</span>
+        </div> -->
+      </div>
+    </div>
+    <div class="section-header--button">
+      <svg width="46px" height="46px" viewBox="10 1951 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs></defs>
+          <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(11.000000, 1952.000000)">
+              <polygon id="" fill="#FFFFFF" points="20.9090909 22.9090909 12 22.5 12 21.1136364 20.9090909 20.7272727 21.2954545 11.8181818 22.6818182 11.8181818 23.0909091 20.7272727 32 21.1136364 32 22.5 23.0909091 22.9090909 22.6818182 31.8181818 21.2954545 31.8181818"></polygon>
+              <circle id="Oval" stroke="#FFFFFF" cx="22" cy="22" r="22"></circle>
+          </g>
+      </svg>
+      <p class="button">Read more</p>
+    </div>
+  </div>
+  <div class="section copy books">
+  {{#Books}}
+      <div class="content__main-column">
+        {{#image}}
+          <div class="body-image">
+            <div class="image--overlay"></div>
+            <img src="{{{image}}}">
+          </div>
+        {{/image}}
+      <h1 class="heading" id="{{section}}">{{{headline}}}</h1>
+      <pre class="copy">{{{description}}}<span class="credit">{{{credit}}}</span></pre>
+      {{#imageCaption}}
+        <div class="caption">
+          <p class="caption-text">
+              <svg width="13px" height="10px" viewBox="419 355 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M431.714076,357.781915 L430.909531,356.963733 L428.168622,356.963733 L426.804985,355.600097 L424.609531,355.600097 L423.245894,356.963733 L420.532258,356.963733 L419.714076,357.781915 L419.714076,363.809188 L420.532258,364.613733 L430.909531,364.613733 L431.714076,363.768279 L431.714076,357.781915 Z M425.714076,363.100097 C424.35044,363.100097 423.259531,362.009188 423.259531,360.659188 C423.259531,359.295551 424.35044,358.204642 425.714076,358.204642 C427.077713,358.204642 428.182258,359.295551 428.182258,360.659188 C428.182258,362.009188 427.077713,363.100097 425.714076,363.100097 Z" id="" stroke="none" fill="#767676" fill-rule="evenodd"></path>
+              </svg>
+            <span class="pre">Above</span> {{imageCaption}}
+          </p>
+        </div>
+      {{/imageCaption}}
+      </div>
+      <div class="ad--wrapper--desktop">
+        <div id="{{adID}}" class="js-ad-slot ad-slot ad-slot--mpu-banner-ad ad-slot--right" data-link-name="ad slot {{adDataName}}" data-test-id="{{adTestId}}" data-name="{{adName}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
+      </div>
+      <div class="ad--wrapper--mobile" {{#adIDMobile}} style="padding:20px 0px;" {{/adIDMobile}}>
+        {{#adIDMobile}}
+        <div id="{{adIDMobile}}" class="js-ad-slot ad-slot ad-slot--inline {{adTestIdMobile}}" data-link-name="ad slot {{adDataNameMobile}}" data-test-id="{{adTestIdMobile}}" data-name="{{adNameMobile}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
+        {{/adIDMobile}}
+      </div>
+  {{/Books}}
+</div>
 </div>
