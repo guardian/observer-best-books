@@ -1,6 +1,6 @@
 <div id="people" data-link-name="people header" class="section header people" data-id="people">
   <div class="section-header--image">
-    <img class="{{imageclass}} place-image" data-lazy-img alt="{{id}}" data-src="https://media.guim.co.uk/e16576b9483026fc2724427f5015652a1f88dcac/0_1292_10328_6199/2000.jpg" src="" height="600" width="900" />
+    <img class="{{imageclass}} place-image" data-lazy-img alt="{{id}}" data-src="https://media.guim.co.uk/8fa32a19a608469d27a0df8b29e1deca85e003a7/0_664_7846_4708/2000.jpg" src="" height="600" width="900" />
     <div class="section-header--title">
       <div class="gs-container">
         <div class="content__main-column">
@@ -30,13 +30,12 @@
   <div class="section copy people">
   {{#People}}
       <div class="content__main-column">
+      <h1 class="heading" id="{{section}}"><div class="text">{{{headline}}}</div></h1>
       {{#image}}
         <div class="body-image">
           <img src="{{{image}}}">
         </div>
       {{/image}}
-      <h1 class="heading" id="{{section}}">{{{headline}}}</h1>
-      <pre class="copy">{{{description}}}</pre><div class="credit">{{{credit}}}</div>
       {{#imageCaption}}
         <div class="caption">
           <p class="caption-text">
@@ -45,6 +44,7 @@
           </p>
         </div>
       {{/imageCaption}}
+      <pre class="copy">{{{description}}}</pre><div class="credit">{{{credit}}}</div>
       </div>
       <div class="ad--wrapper--desktop">
         <div id="{{adID}}" class="js-ad-slot ad-slot ad-slot--mpu-banner-ad ad-slot--right" data-link-name="ad slot {{adDataName}}" data-test-id="{{adTestId}}" data-name="{{adName}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
@@ -63,7 +63,7 @@
 <!--places-->
 <div id="places" data-link-name="places header" class="section header places" data-id="places">
   <div class="section-header--image">
-    <img class="bottom place-image" data-lazy-img alt="{{id}}" data-src="https://media.guim.co.uk/82d0fc44765fa4366de25da0d17852042180b830/0_0_5602_3735/2000.jpg" src="" height="600" width="900" />
+    <img class="bottom place-image" data-lazy-img alt="{{id}}" data-src="https://media.guim.co.uk/065f7e9dfec9ef799aa970fb4bfb2a35540cd242/0_156_1800_1080/1800.jpg" src="" height="600" width="900" />
     <div class="section-header--title">
       <div class="gs-container">
         <div class="content__main-column">
@@ -93,21 +93,21 @@
   <div class="section copy places">
   {{#Places}}
       <div class="content__main-column">
+        <h1 class="heading" id="{{section}}"><div class="text">{{{headline}}}</div></h1>
         {{#image}}
           <div class="body-image">
             <img src="{{{image}}}">
           </div>
         {{/image}}
-      <h1 class="heading" id="{{section}}">{{{headline}}}</h1>
+        {{#imageCaption}}
+          <div class="caption">
+            <p class="caption-text">
+              <svg width="11" height="10" viewBox="0 0 11 10"><path fill-rule="evenodd" d="M5.5 0L11 10H0z"/></svg>
+              {{imageCaption}}
+            </p>
+          </div>
+        {{/imageCaption}}
       <pre class="copy">{{{description}}}</pre><div class="credit">{{{credit}}}</div>
-      {{#imageCaption}}
-        <div class="caption">
-          <p class="caption-text">
-            <svg width="11" height="10" viewBox="0 0 11 10"><path fill-rule="evenodd" d="M5.5 0L11 10H0z"/></svg>
-            {{imageCaption}}
-          </p>
-        </div>
-      {{/imageCaption}}
       </div>
       <div class="ad--wrapper--desktop">
         <div id="{{adID}}" class="js-ad-slot ad-slot ad-slot--mpu-banner-ad ad-slot--right" data-link-name="ad slot {{adDataName}}" data-test-id="{{adTestId}}" data-name="{{adName}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
@@ -150,21 +150,21 @@
   <div class="section copy FoodDrink">
   {{#FoodDrink}}
       <div class="content__main-column">
+        <h1 class="heading" id="{{section}}"><div class="text">{{{headline}}}</div></h1>
         {{#image}}
           <div class="body-image">
             <img src="{{{image}}}">
           </div>
         {{/image}}
-      <h1 class="heading" id="{{section}}">{{{headline}}}</h1>
+        {{#imageCaption}}
+        <div class="caption">
+          <p class="caption-text">
+            <svg width="11" height="10" viewBox="0 0 11 10"><path fill-rule="evenodd" d="M5.5 0L11 10H0z"/></svg>
+           {{imageCaption}}
+          </p>
+        </div>
+        {{/imageCaption}}
       <pre class="copy">{{{description}}}</pre><div class="credit">{{{credit}}}</div>
-      {{#imageCaption}}
-      <div class="caption">
-        <p class="caption-text">
-          <svg width="11" height="10" viewBox="0 0 11 10"><path fill-rule="evenodd" d="M5.5 0L11 10H0z"/></svg>
-         {{imageCaption}}
-        </p>
-      </div>
-      {{/imageCaption}}
       </div>
       <div class="ad--wrapper--desktop">
         <div id="{{adID}}" class="js-ad-slot ad-slot ad-slot--mpu-banner-ad ad-slot--right" data-link-name="ad slot {{adDataName}}" data-test-id="{{adTestId}}" data-name="{{adName}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>
@@ -213,21 +213,21 @@
   <div class="section copy books">
   {{#Books}}
       <div class="content__main-column">
+      <h1 class="heading" id="{{section}}"><div class="text">{{{headline}}}</div></h1>
         {{#image}}
           <div class="body-image">
             <img src="{{{image}}}">
           </div>
         {{/image}}
-      <h1 class="heading" id="{{section}}">{{{headline}}}</h1>
+        {{#imageCaption}}
+          <div class="caption">
+            <p class="caption-text">
+              <svg width="11" height="10" viewBox="0 0 11 10"><path fill-rule="evenodd" d="M5.5 0L11 10H0z"/></svg>
+             {{imageCaption}}
+            </p>
+          </div>
+        {{/imageCaption}}
       <pre class="copy">{{{description}}}</pre><div class="credit">{{{credit}}}</div>
-      {{#imageCaption}}
-        <div class="caption">
-          <p class="caption-text">
-            <svg width="11" height="10" viewBox="0 0 11 10"><path fill-rule="evenodd" d="M5.5 0L11 10H0z"/></svg>
-           {{imageCaption}}
-          </p>
-        </div>
-      {{/imageCaption}}
       </div>
       <div class="ad--wrapper--desktop">
         <div id="{{adID}}" class="js-ad-slot ad-slot ad-slot--mpu-banner-ad ad-slot--right" data-link-name="ad slot {{adDataName}}" data-test-id="{{adTestId}}" data-name="{{adName}}" data-mobile="1,1|2,2|300,250|fluid" data-desktop="1,1|2,2|300,250|fluid"></div>

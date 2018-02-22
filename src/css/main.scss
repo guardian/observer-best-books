@@ -71,7 +71,7 @@ img[data-lazy-img] {
 
 .caption {
   @include mq($from: tablet) {
-    width: 400px;
+    // width: 400px;
   }
 
   svg {
@@ -83,13 +83,10 @@ img[data-lazy-img] {
   }
 
   p.caption-text {
-    // display: inline;
-    // padding: 0;
     margin-bottom: 0;
-    // color: #fff;
-    // background-color: $darkPink;
-    // box-shadow: 5px 0 0 $darkPink,-5px 0 0 $darkPink;
-    padding-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 0;
+    padding-left: 10px;
   }
 }
 
@@ -105,7 +102,7 @@ img[data-lazy-img] {
   img {
     width: 100%;
     @include mq($from:leftCol) {
-      width: calc(100vw - 370.734px);
+      width: calc(100vw - 350.734px);
       // margin-left: -150px;
     }
   }
@@ -156,7 +153,7 @@ h1 {
     background-repeat: no-repeat;
     overflow: hidden;
     @include mq($from: mobileLandscape) {
-      height: 90vh;
+      height: 95vh;
       background-size: cover;
       // background-image: url('https://uploads.guim.co.uk/2017/01/05/namibia_cover_image.png');
       background-position: center center;
@@ -202,7 +199,7 @@ h1 {
     right: 8px;
     line-height: 18px;
     background-color: #fff;
-    padding: 6px 8px 24px;
+    // padding: 6px 8px 24px;
 
     h1 {
       line-height: 36px;
@@ -236,13 +233,38 @@ h1 {
         width: 1300px;
       }
 
+      .content__main-column {
+        .strap {
+          padding-top: 4px;
+          padding-bottom: 12px;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          height: 100%;
+          width: 0.0625rem;
+          background: $grey;
+        }
+      }
+
+      .byline-wrap {
+        border-top: 1px solid $grey;
+        border-bottom: 1px solid $grey;
+        width: 100vw;
+      }
+
       .byline {
-        border-top: 1px solid rgba(251, 251, 251, 0.5);
-        margin-top: 18px;
+        border: none;
+        margin-top: 0;
         padding-top: 6px;
+        padding-bottom: 12px;
+        color: $darkPink;
 
         a {
-          color: #f7acbb;
+          color: $darkPink;
         }
       }
     }
@@ -253,7 +275,7 @@ h1 {
     position: absolute;
     z-index: 20000;
     bottom: 0;
-    padding-left: 8px;
+    // padding-left: 8px;
     @include mq($from: desktop) {
       bottom: 0;
     }
@@ -286,7 +308,7 @@ h1 {
     .light-highlight {
       width: 100%;
       color: $lightPink;
-      border-bottom: solid 1px #777;
+      // border-bottom: solid 1px #777;
       // background-color: $lightPink;
       // box-shadow: 5px 0 0 $lightPink,-5px 0 0 $lightPink;
       // padding-bottom: 3px;
@@ -304,12 +326,10 @@ h1 {
 //menu
 
 .where-to-go--menu {
-  margin-top: 18px;
-  padding-top: 6px;
+  padding-top: 0;
 
   ul {
-    border-top: 1px solid rgba(251, 251, 251, 0.5);
-    padding-top: 6px;
+    padding: 6px 0 12px 5px;
   }
 
   &.sticky {
@@ -321,8 +341,9 @@ h1 {
     width: 94%;
     padding-left: 3%;
     padding-right: 3%;
-    padding-bottom: 12px;
+    // padding-bottom: 12px;
     left: 0;
+    border-bottom: solid 1px $grey;
 
     ul {
       border: none;
@@ -586,6 +607,10 @@ h1 {
     padding: 8px;
   }
 
+  .heading .text {
+    max-width: 610px;
+  }
+
   &.copy {
     display: none;
     width: 96%;
@@ -704,13 +729,15 @@ h1 {
     //   }
     // }
     .credit {
-      margin-left: 6px;
-      font-family: "Guardian Headline Bold", Georgia, serif;
-      background: #FFABDB;
-      padding: 8px;
-      border-radius: 100px;
+      margin-left: 10px;
+      margin-bottom: 14px;
+      font-family: "Guardian Headline Italic Bold", Georgia, serif;
+      color: $darkPink;
+      // background: #FFABDB;
+      // padding: 8px;
+      // border-radius: 100px;
       display: inline-block;
-      line-height: 20px;
+      // line-height: 20px;
     }
 
     pre.copy {
@@ -718,7 +745,7 @@ h1 {
       font-family: $f-serif-text;
       margin-top: 6px;
       margin-bottom: 0;
-      padding-bottom: 12px;
+      // padding-bottom: 12px;
       white-space: pre-wrap;
       /* css-3 */
       white-space: -moz-pre-wrap;
@@ -736,16 +763,12 @@ h1 {
 
       span.pullquote,
       span.pullquote-credit {
-        color: #a60947;
-        font-size: 24px;
-        line-height: 26px;
-        font-family: $f-serif-headline;
-        display: inline-block;
-        @include mq($from: tablet) {
-          font-size: 30px;
-          line-height: 30px;
-          width: 80%;
-        }
+        font-family: "Guardian Headline Regular", Georgia, serif;
+        color: #000;
+        font-size: 26px;
+        line-height: 30px;
+        display: inline;
+
         @include mq($from: leftCol) {
           position: relative;
           z-index: 300;
@@ -753,11 +776,18 @@ h1 {
       }
 
       span.pullquote-credit {
-        color: #767676;
+        color: $black;
+        display: block;
+        // background-color: $black;
+        // box-shadow: 5px 0 0 $black,-5px 0 0 $black;
+        // padding-bottom: 3px;
         font-size: 20px;
       }
 
       span.pullquote {
+        background-color: $lightPink;
+        box-shadow: 5px 0 0 $lightPink,-5px 0 0 $lightPink;
+        padding-bottom: 3px;
         &:before {
           background-image: url("<%= path %>/assets/quote.svg");
           content: '';
@@ -843,6 +873,13 @@ h1 {
 @font-face {
   font-family: "Guardian Headline Italic";
   src: url("https://s3.amazonaws.com/gdn-cdn/fonts/garnett/GHGuardianHeadline-RegularItalic.woff") format('woff'), url("https://s3.amazonaws.com/gdn-cdn/fonts/garnett/GHGuardianHeadline-RegularItalic.ttf") format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Guardian Headline Italic Bold";
+  src: url("https://s3.amazonaws.com/gdn-cdn/fonts/garnett/GHGuardianHeadline-MediumItalic.woff") format('woff'), url("https://s3.amazonaws.com/gdn-cdn/fonts/garnett/GHGuardianHeadline-MediumItalic.ttf") format('truetype');
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
