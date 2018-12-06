@@ -1,8 +1,8 @@
 @import "mq";
 @import "fonts";
-$lightPink: #FFABDB;
-$mediumPink: #BB3B80;
-$darkPink: #7D0068;
+$lightPink: #EACCA0;
+$mediumPink: #A1845C ;
+$darkPink: #6B5840;
 $black: #121212;
 $grey: #DCDCDC; // Uncomment for embeds
 //@import "embed";
@@ -64,7 +64,7 @@ img[data-lazy-img] {
 .ad--wrapper--mobile {
   display: block;
   width: 100%;
-  background-color: $black;
+  background-color: #ffffff;
   @include mq($from: tablet) {
     display: none;
   }
@@ -403,17 +403,18 @@ h1 {
   li {
     list-style: none;
     font-family: $f-sans-serif-text;
+    font-weight: bold;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     margin-right: 6px;
-    line-height: 22px;
+    line-height: 18px;
     @include mq($from: desktop) {
-      font-size: 18px;
-      line-height: 24px;
+      font-size: 15px;
+      line-height: 19px;
     }
 
     &.jump {
-      opacity: 0.5;
+      color: $mediumPink;
     }
 
     &:after {
@@ -698,7 +699,7 @@ h1 {
   }
 
   &.copy {
-    display: none;
+    // display: none;
     background-color: white;
     position: relative;
     // padding-top: 6px;
@@ -743,8 +744,6 @@ h1 {
 
       &:nth-child(1) {
         .heading {
-          border-top: none;
-          margin-top: 0;
 
           &:before {
             display: none;
@@ -780,11 +779,10 @@ h1 {
     }
 
     .credit {
-      margin-left: 10px;
-      margin-bottom: 14px;
-      font-family: "Guardian Headline Italic Bold", Georgia, serif;
-      font-weight: 900;
-      color: $darkPink;
+      font-family: "Guardian Headline Regular", Georgia, serif;
+      font-weight: 200;
+      line-height: 1.2;
+      color: $black;
       display: inline-block;
       // line-height: 20px;
     }
@@ -806,6 +804,11 @@ h1 {
       /* Opera 7 */
       word-wrap: break-word;
       /* Internet Explorer 5.5+ */
+
+      p {
+        padding: 0;
+      }
+
       @include mq($from: tablet) {
         width: 600px;
         // overflow: visible;
