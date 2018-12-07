@@ -76,7 +76,7 @@ xr.get('https://interactive.guim.co.uk/docsdata/1OOdLeKYNge56Iw7GmzTwtBox72LPLu_
     //stick menu
     window.addEventListener('scroll', function(){
       var menuPos = menuPlace.getBoundingClientRect();
-      if(menuPos.top <= 0){
+      if(menuPos.top <= -80){
           menu.classList.add('sticky');
       }else if(menuPos.top > 0){
         menu.classList.remove('sticky');

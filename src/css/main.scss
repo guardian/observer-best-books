@@ -145,6 +145,15 @@ h1 {
   opacity: 0.1;
   z-index: 10;
 }
+
+.internal-anchor {
+  position:relative;
+  top:-120px;
+  @include mq($from: mobileLandscape) {
+    top:-60px;
+  }
+
+}
 //header
 
 .where-to-go-header {
